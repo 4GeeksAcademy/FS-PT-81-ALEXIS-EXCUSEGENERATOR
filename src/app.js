@@ -17,13 +17,13 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  let randomWho = who[Math.floor(Math.random() * who.length)];
-  let randomAction = action[Math.floor(Math.random() * action.length)];
-  let randomWhat = what[Math.floor(Math.random() * what.length)];
-  let randomWhen = when[Math.floor(Math.random() * when.length)];
+  const whoIndex = Math.floor(Math.random() * who.length);
+  const actionIndex = Math.floor(Math.random() * action.length);
+  const whatIndex = Math.floor(Math.random() * what.length);
+  const whenIndex = Math.floor(Math.random() * when.length);
 
-  let excuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}.`;
+  const generator = `${who[whoIndex]} ${action[actionIndex]} ${what[whatIndex]} ${when[whenIndex]}`;
 
   const myTitle = document.getElementById("excuse_id");
-  myTitle.innerHTML = excuse;
+  myTitle.innerHTML = generator;
 };
